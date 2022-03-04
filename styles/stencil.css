@@ -1,0 +1,55 @@
+
+.img-fluid {
+    /* TODO: Set the width to 100% and the height to automatically scale */
+    width: 100%;
+    height: auto;
+}
+
+.img-container {
+    /* TODO: Set the width and height to the same value in pixels, something between 80 and 200 pixels should be good. */
+    /* TODO: Hide the overflow */
+    /* TODO: Set the margin to something less than 10 pixels */
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    margin: 8px;
+}
+
+.store-item {
+    display: inline-block;
+    /* TODO: add text alignment, border, and padding to make the items look better */
+    text-align: center;
+    border: 7px pink ridge;
+    padding: 15px 15px;
+}
+
+.cart {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted blue;
+    margin: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.cart-item {
+    display: inline-block:
+    text-align: center;
+    padding: 10px;
+}
+
+.cart-total {
+    position: absolute;
+    bottom: 0;
+    /* TODO: try experimenting with the left or right attributes to move the total around. Find what looks good! */
+    left: 40px;
+    right: 40px;
+}
+
+div {
+    border: 2px dotted red;
+    border-radius: 20px
+}
+h2 {
+    margin-top: 30px;
+}

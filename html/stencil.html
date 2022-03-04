@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front End Lab!</title>
+    <link type="text/css" rel="stylesheet" href="../styles/stencil.css">
+</head>
+<body>
+    <main>
+        <!--    --------------------------------------------------------------------------------------  ;-->
+        <h2>Part 1: Calculator</h2>
+        <hr>
+        <br>
+        <!-- TODO: add an input of type number here with an id of "first-input" and a placeholder of "first number" -->
+        <input type="number" id="first-input" placeholder="first number"/>
+        +
+        <!-- TODO: add an input of type number here with an id of "second-input" and a placeholder of "second number" -->
+        <input type="number" id="second-input" placeholder="second number"/>
+        =
+        <!-- TODO: add a span element with an id of "total" -->
+        <span id="total">
+        </span>
+        <br> <!--  creates a new line!-->
+        <button id="compute-button"> compute </button>
+        <!--    --------------------------------------------------------------------------------------  ;-->
+
+        <h2>Part 2: Shopping Cart</h2>
+        <hr>
+        <br>
+        <div class="store-item" id="item-1" data-price="5">
+            <!-- TODO: add a div with class "img-container" -->
+            <!-- TODO: inside the div, create an image with class "img-fluid" and source "../images/duck-1.jpg" -->
+            <div class="img-container">
+                <img class="img-fluid" src="../images/duck-1.jpg">
+            </div>
+            <p> $5.00</p>
+            <button data-for="item-1" class="cart-button"> Add to cart </button>
+        </div>
+        <div class="store-item" id="item-2" data-price="4">
+            <!-- TODO: add a div with class "img-container" -->
+            <!-- TODO: inside the div, create an image with class "img-fluid" and source "../images/duck-2.jpg" -->
+            <div class="img-container">
+                <img class="img-fluid" src="../images/duck-2.jpg">
+            </div>
+            <p> $4.00</p>
+            <button data-for="item-2" class="cart-button"> Add to cart </button>
+        </div>
+        <div class="store-item" id="item-3" data-price="3">
+            <!-- TODO: copying the same format as for the previous two items, add HTML for "../images/duck-3.jpg" -->
+            <div class="img-container">
+                <img src="../images/duck-3.jpg" alt="duck-3 image" class="img-fluid">
+            </div>
+            <p> $3.00</p>
+            <button data-for="item-3" class="cart-button"> Add to cart </button>
+        </div>
+
+        <div class="cart" >
+            <h4>My Cart: </h4>
+            <!-- TODO: add a div with id "my-cart" -->
+            <div id="my-cart"> </div>
+            <!-- TODO: surround the dollar [i.e. $0.00] amount with a span element with an id of "cart-total" so you can manipulate
+            it with your script -->
+            <p class="cart-total"> Total: <span id="cart-total"> $0.00 </span> </p>
+        </div>
+
+
+        <!--    --------------------------------------------------------------------------------------  ;-->
+
+    </main>
+
+    <!-- TODO: import assignment.js here. Don't forget to compile your assignment.ts file! -->
+    <script src="../ts/assignment.js"></script>
+</body>
+</html>
