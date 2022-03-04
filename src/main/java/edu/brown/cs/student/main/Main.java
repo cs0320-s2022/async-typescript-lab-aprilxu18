@@ -80,6 +80,7 @@ public final class Main {
     // Allows requests from any domain (i.e., any URL). This makes development
     // easier, but it’s not a good idea for deployment.
     Spark.before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
+    Spark.post("/results", new ResultsHandler());
   }
 
   /**
@@ -110,14 +111,27 @@ public final class Main {
       // TODO: Get JSONObject from req and use it to get the value of the sun, moon,
       // and rising
       // for generating matches
+      JSONObject reqJson = null;
+      try {
+        // Put the request's body in JSON format
+        reqJson = new JSONObject(req.body());
+      } catch (JSONException e) {
+        e.printStackTrace();
+      }
 
       // TODO: use the MatchMaker.makeMatches method to get matches
+      String sun = reqJson.getString("sun");
+      String moon = reqJson.getString("moon");
+      String rising = reqJson.getString("rising");
 
       // TODO: create an immutable map using the matches
+      List<String> matchesLst = MatchMaker.makeMatches(sun, moon, rising);
 
       // TODO: return a json of the suggestions (HINT: use GSON.toJson())
+      Map variables = ImmutableMap.of("matches", matchesLst);
+
       Gson GSON = new Gson();
-      return null;
+      return GSON.toJson(variables);
     }
   }
 }
