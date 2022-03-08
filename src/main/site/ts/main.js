@@ -68,8 +68,8 @@ function updateSuggestions(matches) {
 //  HINT: the listener callback function should be asynchronous and wait until the values are
 //  updated before calling postAndUpdate().
 document.addEventListener("keyup", (event) => __awaiter(void 0, void 0, void 0, function* () {
-    if (event.key === "2") {
-        yield updateValues("Libra", "Libra", "Libra");
+    if (event.key === "1") {
+        yield updateValues("Aries", "Aries", "Aries");
         postAndUpdate();
     }
 }));
